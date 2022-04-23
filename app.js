@@ -11,3 +11,8 @@ const saludar = (funcionCallback, str) => {
 }
 
 saludar(imprimirPalabra, 'holi crayoli')
+
+
+setTimeout(() => {
+  console.log('despues de 4 segundos')
+}, 4000);
