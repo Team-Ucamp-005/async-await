@@ -32,22 +32,21 @@ console.log('Hola Mundo');
 //   console.log(err)
 // })
 
-const statuss = new Promise((resolve, reject) => {
-  let valor = 5;
-  if (valor > 5) {
-    resolve('La variable es mayor a 5');
-  } else {
-    reject('Es menor a 5');
-  }
-})
+// const statuss = new Promise((resolve, reject) => {
+//   let valor = 5;
+//   if (valor > 5) {
+//     resolve('La variable es mayor a 5');
+//   } else {
+//     reject('Es menor a 5');
+//   }
+// })
 
-
-console.log(statuss)
-statuss.then((res) => {
-  console.log(res)
-}).catch((err) => {
-  console.log(err)
-})
+// console.log(statuss)
+// statuss.then((res) => {
+//   console.log(res)
+// }).catch((err) => {
+//   console.log(err)
+// })
 
 // statuss
 // .then((res) => console.log(res))
@@ -57,3 +56,16 @@ statuss.then((res) => {
 //   .then(console.log)
 //   .catch(console.log)
 
+
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function uppercaseString(s) {
+  // tu código va aquí
+  await sleep(500)
+  return s.toUpperCase()
+}
+
+uppercaseString("edward").then(console.log);
