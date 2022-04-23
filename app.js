@@ -17,21 +17,43 @@ console.log('Hola Mundo');
 //   console.log('despues de 4 segundos')
 // }, 4000);
 
-const saludar = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve('Hola mundo. Soy llamado desde una promesa');
-    reject('Ha fallado la promesa');
-  }, 2000);
+// const saludar = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve('Hola mundo. Soy llamado desde una promesa');
+//     reject('Ha fallado la promesa');
+//   }, 2000);
+// })
+
+// console.log(saludar)
+
+// saludar.then((res) => {
+//   console.log(res)
+// }).catch((err) => {
+//   console.log(err)
+// })
+
+const statuss = new Promise((resolve, reject) => {
+  let valor = 5;
+  if (valor > 5) {
+    resolve('La variable es mayor a 5');
+  } else {
+    reject('Es menor a 5');
+  }
 })
 
-console.log(saludar)
 
-saludar.then((res) => {
+console.log(statuss)
+statuss.then((res) => {
   console.log(res)
 }).catch((err) => {
   console.log(err)
 })
 
+// statuss
+// .then((res) => console.log(res))
+// .catch((err) => console.log(err))
 
-
+// statuss
+//   .then(console.log)
+//   .catch(console.log)
 
