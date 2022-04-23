@@ -1,0 +1,23 @@
+{
+  "name": "async-await",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -a localhost -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstack-g-5/async-await.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullstack-g-5/async-await/issues"
+  },
+  "homepage": "https://github.com/fullstack-g-5/async-await#readme",
+  "dependencies": {
+    "bulma": "^0.9.3"
+  }
+}

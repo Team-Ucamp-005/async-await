@@ -1,11 +1,21 @@
-const buscarFrase = () => {
-  const res = fetch("https://api.chucknorris.io/jokes/random");
+const btn = document.querySelector('#no-se');
+const buscarFrase = async () => {
+
+  const res = await fetch("https://api.chucknorris.io/jokes/random");
 
   console.log(res)
 
-  const frase = res.json();
+  const frase = await res.json();
 
-  console.log(frase);
+  console.log(frase.value);
+
+  document.querySelector('#text-content').innerHTML = frase.value;
+
 };
+
+btn.addEventListener('click', () => {
+  document.querySelector('#text-content').innerHTML = '';
+  buscarFrase();
+})
 
 buscarFrase();
